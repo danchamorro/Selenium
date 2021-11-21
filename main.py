@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 def get_driver():
     # Create a new instance of the Chrome driver with the service
     service = Service(
-        "/Users/danielchamorro/Documents/Learning/AutomateWithPython/Selenium/chromedriver")
+        "../Selenium/chromedriver")
     service.start()
     driver = webdriver.Remote(service.service_url)
     # Navigate to the application home page
