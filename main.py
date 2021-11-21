@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 
 # Create a new instance of the Chrome driver with the service
 service = Service(
@@ -12,6 +13,6 @@ driver.get("http://automated.pythonanywhere.com")
 
 # Get elements by class name
 # element = driver.find_elements("animated fadeIn")
-element = driver.find_element_by_class_name("animated").text
+element = driver.find_element(By.CLASS_NAME, "animated").text
 
 print(element)
