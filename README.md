@@ -2,10 +2,10 @@
 
 ## main.py
 
-Description:  
+**Description:**  
 Grab the quote from the website and print it out
 
 ## login.py
 
-Description:  
+**Description:**  
 Login to the website and print out the quote
