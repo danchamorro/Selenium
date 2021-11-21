@@ -1,10 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
-# Get the path of the ChromeDriver
-chrome_driver_path = "/Users/danielchamorro/Documents/Learning/AutomateWithPython/Selenium/chromedriver"
-
-# Create a new Chrome session
-driver = webdriver.Chrome(chrome_driver_path)
+# Create a new instance of the Chrome driver with the service
+service = Service(
+    "/Users/danielchamorro/Documents/Learning/AutomateWithPython/Selenium/chromedriver")
+service.start()
+driver = webdriver.Remote(service.service_url)
 
 # Navigate to the application home page
 driver.get("http://automated.pythonanywhere.com")
