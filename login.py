@@ -24,6 +24,8 @@ def login_user():
     driver.find_element(By.ID, "id_password").send_keys(Keys.ENTER)
     # Print url to verify login
     print(driver.current_url)
+    # Get World Temperature from xpath and print
+    print(driver.find_element(By.XPATH, "/html/body/div[1]/h1[2]").text)
 
 
 login_user()
